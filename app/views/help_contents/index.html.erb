@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>お手伝い表</h1>
+<pre><%= @help_records %></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>お手伝い名</th>
+      <th>単価</th>
+      <th>合計金額</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @help_contents.each do |help_content| %>
+      <tr>
+        <td><%= help_content.name %></td>
+        <td><%= help_content.unit_price %></td>
+        <td><%= link_to '詳細', help_content %></td>
+        <td><%= link_to '編集', edit_help_content_path(help_content) %></td>
+        <td><%= link_to '削除', help_content, method: :delete, data: { confirm: '削除しますか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Help Content', new_help_content_path %>

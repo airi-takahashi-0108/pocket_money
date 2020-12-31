@@ -1,0 +1,19 @@
+<div class="page-container">
+    <h1 class="page-title">お手伝いアプリ</h1>
+
+    <% @help_contents.each do |help_content| %>
+    <div>
+        <h2><%= help_content.name %></h2>
+        <table>
+          <tr>
+            <th>今月お手伝いした数</th>
+            <td>ーー回</td>
+          </tr>
+          <tr>
+            <th>もらえるお小遣い</th>
+            <td>ーー円</td>
+          </tr>
+        </table>
+    </div>
+    <% end %>
+</div>

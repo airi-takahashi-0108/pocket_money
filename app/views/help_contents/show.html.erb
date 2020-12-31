@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @help_content.name %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @help_content.unit_price %>
+</p>
+
+<%= link_to 'Edit', edit_help_content_path(@help_content) %> |
+<%= link_to 'Back', help_contents_path %>

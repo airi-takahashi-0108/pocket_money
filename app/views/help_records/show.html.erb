@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Help content:</strong>
+  <%= @help_record.help_content_id %>
+</p>
+
+<p>
+  <strong>Times:</strong>
+  <%= @help_record.times %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @help_record.quality %>
+</p>
+
+<%= link_to 'Edit', edit_help_record_path(@help_record) %> |
+<%= link_to 'Back', help_records_path %>

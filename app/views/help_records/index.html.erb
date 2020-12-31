@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Help Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Help content</th>
+      <th>Times</th>
+      <th>Quality</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @help_records.each do |help_record| %>
+      <tr>
+        <td><%= help_record.help_content_id %></td>
+        <td><%= help_record.times %></td>
+        <td><%= help_record.quality %></td>
+        <td><%= link_to 'Show', help_record %></td>
+        <td><%= link_to 'Edit', edit_help_record_path(help_record) %></td>
+        <td><%= link_to 'Destroy', help_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Help Record', new_help_record_path %>

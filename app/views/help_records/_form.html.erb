@@ -1,0 +1,32 @@
+<%= form_with(model: help_record) do |form| %>
+  <% if help_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(help_record.errors.count, "error") %> prohibited this help_record from being saved:</h2>
+
+      <ul>
+        <% help_record.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :help_content_id %>
+    <%= form.text_field :help_content_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :times %>
+    <%= form.number_field :times %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quality %>
+    <%= form.text_field :quality %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
